@@ -2,7 +2,13 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-var db = mongoose.connect('mongodb://localhost/booksAPI');
+var db;
+
+if(process.env.ENV == 'Test')
+    db = mongoose.connect('mongodb://localhost/booksAPI_test');
+else{
+    db = mongoose.connect('mongodb://localhost/booksAPI');
+}
 
 var Book = require('./models/bookModel');
 
@@ -24,3 +30,5 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
     console.log('App listening on port ' + port + '!');
 });
+
+module.exports = app;

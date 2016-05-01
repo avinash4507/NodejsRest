@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/avinash4507/NodejsRest#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6"
   },
   "devDependencies": {
     "eslint": "^2.9.0"

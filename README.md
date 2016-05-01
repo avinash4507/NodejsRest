@@ -1,2 +1,2 @@
 # NodejsRest
-REST services using nodes, express and MongoDB
+REST services using node.js, express.js and MongoDB
